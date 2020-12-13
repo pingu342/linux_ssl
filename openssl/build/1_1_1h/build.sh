@@ -11,7 +11,7 @@ rm -rf openssl-1.1.1h
 tar xvzf openssl-1.1.1h.tar.gz
 
 pushd openssl-1.1.1h
-./config --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared
+./config --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method
 make
 make install
 popd
