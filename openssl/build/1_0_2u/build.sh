@@ -11,7 +11,8 @@ rm -rf openssh-OpenSSL_1_0_2u
 tar xvzf OpenSSL_1_0_2u.tar.gz
 
 pushd openssl-OpenSSL_1_0_2u
-./config --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared
+#./config --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared
+./config -g3 -O0 -fno-omit-frame-pointer -fno-inline-functions --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared
 make
 make install
 popd

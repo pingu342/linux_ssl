@@ -1,16 +1,16 @@
 TOP_PATH=$(cd ../../ && pwd)
-INSTALL_PATH=$TOP_PATH/1_1_1h
+INSTALL_PATH=$TOP_PATH/1_1_0k
 echo INSTALL_PATH: $INSTALL_PATH
 
-if [ ! -e openssl-1.1.1h.tar.gz ]; then
-	wget https://www.openssl.org/source/openssl-1.1.1h.tar.gz
+if [ ! -e OpenSSL_1_1_0k.tar.gz ]; then
+	wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_0k.tar.gz
 fi
 
 rm -rf $INSTALL_PATH
-rm -rf openssl-1.1.1h
-tar xvzf openssl-1.1.1h.tar.gz
+rm -rf openssl-OpenSSL_1_1_0k
+tar xvzf OpenSSL_1_1_0k.tar.gz
 
-pushd openssl-1.1.1h
+pushd openssl-OpenSSL_1_1_0k
 ./config --debug --prefix=$INSTALL_PATH --openssldir=$INSTALL_PATH/openssl shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method enable-rc4
 make
 make install
