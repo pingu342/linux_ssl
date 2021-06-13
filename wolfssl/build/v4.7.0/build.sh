@@ -17,12 +17,12 @@ tar xvzf v4.7.0-stable.tar.gz
 
 pushd wolfssl-4.7.0-stable
 ./autogen.sh
-#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm CFLAGS="-march=armv7-a -mthumb"
-#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-asm CFLAGS="-march=armv7-a -mthumb"
+#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm CFLAGS="-march=armv7-a -mthumb -Os"
+#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-asm CFLAGS="-march=armv7-a -mthumb -Os"
 #./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-math-all --enable-sp-asm CFLAGS="-march=armv7-a -mthumb -Os"
 ./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-math-all=small --enable-sp-asm CFLAGS="-march=armv7-a -mthumb -Os"
-#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-math --enable-sp-asm CFLAGS="-march=armv7-a -mthumb"
-#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --disable-fastmath CFLAGS="-march=armv7-a -mthumb"
+#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --enable-sp --enable-sp-math --enable-sp-asm CFLAGS="-march=armv7-a -mthumb -Os"
+#./configure --prefix=$INSTALL_PATH --enable-keygen --enable-aesccm --enable-asm --disable-fastmath CFLAGS="-march=armv7-a -mthumb -Os"
 
 make
 make install
