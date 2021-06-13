@@ -1,5 +1,8 @@
 TOP_PATH=$(cd ../../ && pwd)
 INSTALL_PATH=$TOP_PATH/v4.7.0
+#INSTALL_PATH=$TOP_PATH/v4.7.0_sp
+#INSTALL_PATH=$TOP_PATH/v4.7.0_sp-math-all
+#INSTALL_PATH=$TOP_PATH/v4.7.0_sp-math
 echo INSTALL_PATH: $INSTALL_PATH
 
 if [ ! -e v4.7.0-stable.tar.gz ]; then
